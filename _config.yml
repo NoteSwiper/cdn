@@ -1,0 +1,126 @@
+source: .
+destination: ./_site
+
+url: https://noteswiper.github.io/cdn/
+
+collections_dir: .
+plugins_dir: _plugins
+layouts_dir: _layouts
+data_dir: _data
+includes_dir: _includes
+
+name: "cdn"
+title: "CDN"
+
+feed:
+  path: /feed.atom
+
+
+description: "no description defined"
+
+author:
+  twitter: alphabetLoreFAY
+
+sass:
+  sass_dir: _sass
+
+collections:
+  posts:
+    output: true
+
+safe: false
+disable_disk_cache: false
+
+exclude: ["Gemfile","Gemfile.lock","node_modules","vendor/bundle/","vendor/cache/","vendor/gems/","vendor/ruby"]
+include: [".htaccess","_pages","_files","files"]
+keep_files: [".git",".svn"]
+
+timezone: Asia/Tokyo
+encoding: utf-8
+
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+strict_front_matter: false
+
+plugins:
+  - jekyll-avatar
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-sass-converter
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
+
+show_drafts: true
+future: true
+unpublished: true
+lsi: true
+limit_posts: 0
+
+profile: true
+
+defaults: 
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: date
+      layout: post
+  - scope: 
+      path: "assets/img/custom"
+    values:
+      customImage: true
+
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: "\n\n"
+
+show_dir_listing: true
+
+permalink: date
+paginate_path: /page:num
+
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
+
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+webrick:
+  headers:
+    test: "test"
+
+kramdown:
+  input: GFM
+  toc_levels: "8"
+  hard_wrap: false
+  gfm_emojis: true
+  auto_id_prefix: "autoid"
+  auto_id_stripping: true
+  auto_ids: true
+  entity_output: as_char
+  footnote_backlink: "&#8617;"
+  footnote_backlink_inline: "false"
+  footnote_nr: 1
+  footnote_prefix: "footn"
+  header_offset: 0
+  html_to_native: true
+  latex_headers: section,subsection,subsubsection,paragraph,subparagraph,subparagraph
+  line_width: 72
+  math_engine: mathjax
+  parse_block_html: false
+  parse_span_html: true
+  remove_block_html_tags: true
+  remove_line_breaks_for_cjk: false
+  remove_span_html_tags: false
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  syntax_highlighter: rouge
+  template: ""
+  transliterated_header_ids: true

@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<ul>
+{%- for file in site.static_files -%}
+<li class="file-li"><a href="{{ file.path }}">{{ file.path }}</a><span class="file-modif">{{ file.modified_time }}</span></li>
+{%- endfor -%}
+</ul>
